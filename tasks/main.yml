@@ -1,0 +1,7 @@
+---
+# tasks file for dotvim
+- name: "Including Installation tasks"
+  ansible.builtin.include_tasks: install.yml
+
+- name: "Including vim setup tasks"
+  ansible.builtin.include_tasks: vim_setup.yml

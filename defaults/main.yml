@@ -1,0 +1,16 @@
+---
+# defaults file for dotvim
+# dotvim_pkgs list the packages to be installed
+dotvim_pkgs:
+  - vim
+  - vim-X11
+  - neovim
+
+# define the vim root install path. default $HOME
+install_root: "{{ ansible_facts['env']['HOME'] }}"
+
+# define the vim dirs to be created
+vim_dirs:
+  - name: ".vim"
+    path: "{{ install_root }}"
+    desc: "creates the {{ install_root }}/.vim directory"

@@ -1,0 +1,15 @@
+---
+# setup and configure vim
+- name: "Ensure vim directories exists"
+  ansible.builtin.file:
+    path: "{{ item.path }}/{{ item.name }}"
+    state: directory
+    owner: "{{ item.owner | default (__default_owner) }}"
+    group: "{{ item.group | default (__default_group) }}"
+    mode: "{{ item.mode | default ('0755') }}"
+  loop: "{{ vim_dirs }}"
+
+- name: "Installing vim template"
+  ansible.builtin.template:
+    src: vimrc
+    dest: "{{ install_root }}/.vimrc"

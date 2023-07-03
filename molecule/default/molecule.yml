@@ -1,0 +1,16 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: podman
+platforms:
+  - name: fedora38
+    image: registry.fedoraproject.org/fedora:38
+    pre_build_image: true
+  #  image: quay.io/centos/centos:stream8
+  #  pre_build_image: true
+  #- name: centos8
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
