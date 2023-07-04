@@ -5,3 +5,8 @@
 
 - name: "Including vim setup tasks"
   ansible.builtin.include_tasks: vim_setup.yml
+
+- name: "Including Pathogen"
+  ansible.builtin.include_tasks: pathogen.yml
+  when:
+    - dotvim_pathogen.enable|bool
