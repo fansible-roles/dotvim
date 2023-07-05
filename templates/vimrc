@@ -1,2 +1,5 @@
-source $HOME/.vim/custom.vim      "my custom settings
-source $HOME/.vim/pathogen.vim 	  "pathogen plugin manager settings
+source 	$HOME/.vim/custom/settings.vim	"my custom settings
+source 	$HOME/.vim/custom/maps.vim	"keyboard maps
+
+" --- Including external modules ---
+source	$HOME/.vim/custom/plug.vim	"plugins manager settings

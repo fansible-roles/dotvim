@@ -1,9 +1,0 @@
----
-# install and configure the pathogen plugin manager
-# more info: https://github.com/tpope/vim-pathogen
-
-- name: "Installing Pathogen"
-  ansible.builtin.get_url:
-    url: "{{ dotvim_pathogen.url }}"
-    dest: "{{ dotvim_pathogen.dest }}"
-

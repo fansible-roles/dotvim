@@ -1,0 +1,9 @@
+---
+# install and configure vim plugins
+
+- name: "Installing VIM Plugin"
+  ansible.builtin.get_url:
+    url: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+  when: item.enable|bool
+  loop: "{{ dotvim_plugins }}"
