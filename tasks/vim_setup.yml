@@ -16,6 +16,6 @@
 
 - name: "Installing vim files"
   ansible.builtin.copy:
-    src: "{{ item }}"
-    dest: "{{ install_root }}/.vim/custom/"
-  with_fileglob: "files/*.vim"
+    src: "{{ item.name }}"
+    dest: "{{ item.dest }}"
+  loop: "{{ dotvim_files }}"
