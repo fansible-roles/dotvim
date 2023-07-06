@@ -1,5 +1,34 @@
-source 	$HOME/.vim/custom/settings.vim	"my custom settings
-source 	$HOME/.vim/custom/maps.vim	"keyboard maps
+" ############## WARNING ##############
+" This file is managed by the ansible 
+" role mrbrandao.dotvim.
+" Any manual changes might be lost
+" #####################################
 
-" --- Including external modules ---
-source	$HOME/.vim/custom/plug.vim	"plugins manager settings
+" ###### dotvim_plugins section #######
+{% for plugin in dotvim_plugins %}
+{% if plugin.enable|bool %}
+
+{% if plugin.name == "pathogen" %}
+" --- Pathogen Initialization ---
+execute pathogen#infect('bundle/{}')
+call pathogen#helptags()
+filetype plugin indent on
+" -------------------------------
+
+{% elif plugin.name == "plug" %}
+" --- Including Plug Settings ---
+source {{ plugin.settings }}
+" -------------------------------
+
+{% endif %}
+{% endif %}
+{% endfor %}
+" #####################################
+
+" ####### dotvim_files section ########
+{% for file in dotvim_files %}
+{% if file.load|bool %}
+source {{ file.dest }}	"{{ file.desc }}
+{% endif %}
+{% endfor %}
+" #####################################

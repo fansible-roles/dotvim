@@ -35,6 +35,10 @@ vim_dirs:
     path: "{{ install_root }}"
     desc: "creates the directory to load files after all"
 
+  - name: ".vim/swapfiles"
+    path: "{{ install_root }}"
+    desc: "creates the swapfiles directory"
+
 # define the pathogen settings
 dotvim_plugins:
   - name: "pathogen"
