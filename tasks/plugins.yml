@@ -7,3 +7,9 @@
     dest: "{{ item.dest }}"
   when: item.enable|bool
   loop: "{{ dotvim_plugins }}"
+  register: __plugins_installed
+
+- name: "Remember to run :PlugInstall"
+  ansible.builtin.debug:
+    msg: "After installing vim plug run :PlugInstall to install the plugins"
+  when: __plugins_installed.changed|bool
