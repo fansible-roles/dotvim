@@ -1,0 +1,6 @@
+---
+# install pip packages
+- name: "Installing pip package"
+  ansible.builtin.pip:
+    name: "{{ item.name }}=={{ item.version }}"
+  loop: "{{ dotvim_pip }}"
