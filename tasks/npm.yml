@@ -1,9 +1,0 @@
----
-# install npm packages
-- name: "Installing node module"
-  community.general.npm:
-    name: "{{ item.name }}"
-    global: "{{ item.global }}"
-    version: "{{ item.version }}"
-    state: present
-  loop: "{{ dotvim_npm }}" 

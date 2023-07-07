@@ -19,41 +19,6 @@ dotvim_pkgs:
   - npm
   - yarnpkg
 
-# dotvim_npm list packages to be installed using npm
-# in general those are modules are used by ale
-dotvim_npm:
-  - name: "alex"
-    version: "11.0.0"
-    global: true
-    info: "https://github.com/get-alex/alex"
-
-  - name: "prettier"
-    version: "3.0.0"
-    global: true
-    info: "https://github.com/prettier/prettier"
-
-  - name: "eslint"
-    version: "8.44.0"
-    global: true
-    info: "https://eslint.org/"
-
-  - name: "cspell"
-    version: "6.31.1"
-    global: true
-    info: "https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell"
-
-  - name: "@stoplight/spectral-cli"
-    version: "6.8.0"
-    global: true
-    info: "https://github.com/stoplightio/spectral"
-
-# dotvim_pip list of pip packages
-# in general those are modules are used by ale
-dotvim_pip:
-  - name: "gitlab-lint"
-    version: "0.4.0"
-    info: "https://github.com/elijah-roberts/gitlab-lint"
-
 # define the vim root install path. default $HOME
 install_root: "{{ ansible_facts['env']['HOME'] }}"
 

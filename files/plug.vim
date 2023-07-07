@@ -38,7 +38,19 @@ Plug 'mrbrandao/VimCompletesMe', { 'commit': 'b915ac2' }
 "Plug 'vim-syntastic/syntastic'
 
 " Fancy nutela vim linter
-Plug 'dense-analysis/ale', { 'tag': 'v3.3.0' }
+Plug 'dense-analysis/ale', { 'tag': 'v3.3.0',
+       \ 'do': 'npm install --prefix $HOME/.vim/plugged/ale
+       \ @stoplight/spectral-cli@6.8.0
+       \ alex@11.0.0
+       \ cspell@6.31.1
+       \ eslint@8.44.0
+       \ prettier@3.0.0;
+       \ pip install --user
+       \ gitlab-lint'
+       \ }
+
+" Ansible Language Server lint
+Plug 'yaegassy/coc-ansible', {'do': 'yarn install --frozen-lockfile'}
 
 " Plugin outside ~/.vim/plugged with post-update hook
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

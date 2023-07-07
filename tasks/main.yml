@@ -3,12 +3,6 @@
 - name: "Including Installation tasks"
   ansible.builtin.include_tasks: install.yml
 
-- name: "Including pypi packages"
-  ansible.builtin.include_tasks: pip.yml
-
-- name: "Including npm packages"
-  ansible.builtin.include_tasks: npm.yml
-
 - name: "Including vim setup tasks"
   ansible.builtin.include_tasks: vim_setup.yml
 
