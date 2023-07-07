@@ -8,7 +8,12 @@
 {% for plugin in dotvim_plugins %}
 {% if plugin.enable|bool %}
 
-{% if plugin.name == "pathogen" %}
+{% if plugin.name == "setmypath" %}
+" -- SetMyPath Initialization ---
+call setmypath#Setup()
+" -------------------------------
+
+{% elif plugin.name == "pathogen" %}
 " --- Pathogen Initialization ---
 execute pathogen#infect('bundle/{}')
 call pathogen#helptags()

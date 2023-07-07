@@ -103,6 +103,13 @@ dotvim_plugins:
     version: "0.11.0"
     desc: "more info: https://github.com/junegunn/vim-plug"
     settings: "{{ install_root }}/.vim/plug.vim"
+
+  - name: "setmypath"
+    enable: true
+    url: "https://raw.githubusercontent.com/junegunn/vim-plug/0.11.0/plug.vim"
+    dest: "/tmp/tash.vim"  
+    version: "0.1.0"
+    desc: "more info: https://github.com/mrbrandao/vim-setmypath"
   
 # define the .vim files to be installed
 dotvim_files:
@@ -119,6 +126,11 @@ dotvim_files:
   - name: "plug.vim"
     dest: "{{ install_root }}/.vim/plug.vim"
     desc: "the plug main settings sourced in the plugins section" 
+    load: false
+
+  - name: "setmypath.vim"
+    dest: "{{ install_root }}/.vim/autoload/setmypath.vim"
+    desc: "call setmypath on startup"
     load: false
 
   - name: "nerdtree.vim"
