@@ -72,3 +72,28 @@ dotvim_files:
     dest: "{{ install_root }}/.vim/plug.vim"
     desc: "the plug main settings sourced in the plugins section" 
     load: false
+
+  - name: "nerdtree.vim"
+    dest: "{{ install_root }}/.vim/nerdtree.vim"
+    desc: "nertree settings" 
+    load: true
+
+  - name: "nerdtree-git.vim"
+    dest: "{{ install_root }}/.vim/nerdtree-git.vim"
+    desc: "nertree-git settings" 
+    load: true
+
+  - name: "airline.vim"
+    dest: "{{ install_root }}/.vim/airline.vim"
+    desc: "airline settings" 
+    load: true
+
+  - name: "devicons.vim"
+    dest: "{{ install_root }}/.vim/devicons.vim"
+    desc: "devicons settings" 
+    load: true
+
+  - name: "ale.vim"
+    dest: "{{ install_root }}/.vim/ale.vim"
+    desc: "ale settings" 
+    load: true
