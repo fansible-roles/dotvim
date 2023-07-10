@@ -38,13 +38,12 @@ Plug 'mrbrandao/VimCompletesMe', { 'commit': 'b915ac2' }
 "Plug 'vim-syntastic/syntastic'
 
 " Fancy nutela vim linter
+" to avoid long dependency lines npm packages list were moved to
+" vimfiles/ale-package.json
 Plug 'dense-analysis/ale', { 'tag': 'v3.3.0',
-       \ 'do': 'npm install --prefix $HOME/.vim/plugged/ale
-       \ @stoplight/spectral-cli@6.8.0
-       \ alex@11.0.0
-       \ cspell@6.31.1
-       \ eslint@8.44.0
-       \ prettier@3.0.0;
+       \ 'do': '
+       \ mv $HOME/.vim/vimfiles/ale-package.json $HOME/.vim/plugged/ale/package.json;
+       \ npm install --prefix $HOME/.vim/plugged/ale/;
        \ pip install --user
        \ gitlab-lint'
        \ }

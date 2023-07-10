@@ -15,7 +15,6 @@ dotvim_pkgs:
   - python3-lsp-black
   - bandit
   - black
-  - alex
   - npm
   - yarnpkg
 
@@ -122,3 +121,8 @@ dotvim_files:
     dest: "{{ install_root }}/.vim/ale.vim"
     desc: "ale settings" 
     load: true
+
+  - name: "ale/package.json"
+    dest: "{{ install_root }}/.vim/vimfiles/ale-package.json"
+    desc: "ale dependencies" 
+    load: false
