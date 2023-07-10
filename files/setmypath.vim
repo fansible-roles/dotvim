@@ -2,10 +2,10 @@
 " Maintainer:   Igor Brandao <github.com/mrbrandao>
 " Version:      0.1.0
 
-let node = $HOME . '/.vim/plugged/ale/node_modules/.bin:'
+let node = $HOME . '/.vim/plugged/ale/node_modules/.bin'
 let path = $PATH
 function! setmypath#Setup()
-  let $PATH = g:path . g:node
+  let $PATH = g:path . ':' . g:node
 endfunction
 
 " vim:set et sw=2:
