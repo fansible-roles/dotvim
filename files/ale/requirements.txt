@@ -1,0 +1,13 @@
+# use this file add any other pypi requirements to be installed
+# during ale install when run :PlugInstall
+autoflake
+autoimport
+black
+#bashate
+flakehell
+gitlab-lint>=0.4.0
+isort
+msgpack>=1.0.0
+pynvim
+python-lsp-server[all]
+vim-vint

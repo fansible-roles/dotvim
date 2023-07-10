@@ -42,14 +42,21 @@ Plug 'mrbrandao/VimCompletesMe', { 'commit': 'b915ac2' }
 " vimfiles/ale-package.json
 Plug 'dense-analysis/ale', { 'tag': 'v3.3.0',
        \ 'do': '
-       \ mv $HOME/.vim/vimfiles/ale-package.json $HOME/.vim/plugged/ale/package.json;
+       \ cp -fv $HOME/.vim/vimfiles/ale-package.json $HOME/.vim/plugged/ale/package.json;
        \ npm install --prefix $HOME/.vim/plugged/ale/;
-       \ pip install --user
-       \ gitlab-lint'
-       \ }
+       \ pip install --user -r $HOME/.vim/vimfiles/ale-requirements.txt
+       \ '}
 
 " Ansible Language Server lint
 Plug 'yaegassy/coc-ansible', {'do': 'yarn install --frozen-lockfile'}
+
+" Deoplete autocomplition; more info: https://github.com/Shougo/deoplete.nvim
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
+" Vim go
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -69,8 +76,6 @@ Plug 'yaegassy/coc-ansible', {'do': 'yarn install --frozen-lockfile'}
 " Anible Linter
 "Plug 'erikzaadi/vim-ansible-yaml'
 
-" Vim go
-"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Initialize plugin system
 call plug#end()

@@ -13,10 +13,13 @@ dotvim_pkgs:
   - python3-mypy
   - python3-pycodestyle
   - python3-lsp-black
+  - rpmlint
   - bandit
-  - black
   - npm
   - yarnpkg
+  - jq
+  - clang-tools-extra
+  - ShellCheck
 
 # define the vim root install path. default $HOME
 install_root: "{{ ansible_facts['env']['HOME'] }}"
@@ -124,5 +127,15 @@ dotvim_files:
 
   - name: "ale/package.json"
     dest: "{{ install_root }}/.vim/vimfiles/ale-package.json"
-    desc: "ale dependencies" 
+    desc: "ale npm dependencies" 
     load: false
+
+  - name: "ale/requirements.txt"
+    dest: "{{ install_root }}/.vim/vimfiles/ale-requirements.txt"
+    desc: "ale pip dependencies" 
+    load: false
+
+  - name: "deoplete.vim"
+    dest: "{{ install_root }}/.vim/deoplete.vim"
+    desc: "deoplete autocomplition" 
+    load: true
