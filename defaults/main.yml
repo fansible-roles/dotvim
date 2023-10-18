@@ -1,25 +1,29 @@
 ---
 # defaults file for dotvim
-# dotvim_pkgs list the packages to be installed
+# dotvim_pkgs a list of packages to be installed or removed
 dotvim_pkgs:
-  - vim
-  - vim-X11
-  - ansible-lint
-  - yamllint
-  - pylint
-  - python-pip
-  - python3-flake8
-  - python3-pyflakes
-  - python3-mypy
-  - python3-pycodestyle
-  - python3-lsp-black
-  - rpmlint
-  - bandit
-  - npm
-  - yarnpkg
-  - jq
-  - clang-tools-extra
-  - ShellCheck
+  remove:
+    - nano-default-editor
+  install:
+    - vim-default-editor
+    - vim
+    - bat
+    - ansible-lint
+    - yamllint
+    - pylint
+    - python-pip
+    - python3-flake8
+    - python3-pyflakes
+    - python3-mypy
+    - python3-pycodestyle
+    - python3-lsp-black
+    - rpmlint
+    - bandit
+    - npm
+    - yarnpkg
+    - jq
+    - clang-tools-extra
+    - ShellCheck
 
 # define the vim root install path. default $HOME
 install_root: "{{ ansible_facts['env']['HOME'] }}"
@@ -138,4 +142,9 @@ dotvim_files:
   - name: "deoplete.vim"
     dest: "{{ install_root }}/.vim/deoplete.vim"
     desc: "deoplete autocomplition" 
+    load: true
+
+  - name: "fzf.vim"
+    dest: "{{ install_root }}/.vim/fzf.vim"
+    desc: "fuzzy finder settings" 
     load: true

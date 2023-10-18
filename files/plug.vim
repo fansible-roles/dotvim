@@ -59,7 +59,12 @@ Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" if looking to install fzf for bash consider to use:
+" { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install(all) } }
+
+" fzf.vim is a better fzf vim integration more at: https://github.com/junegunn/fzf.vim
+Plug 'junegunn/fzf.vim'
 
 " Autocomplete for python scripts using jedi
 "Plug 'davidhalter/jedi-vim'
