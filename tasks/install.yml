@@ -1,6 +1,12 @@
 ---
+- name: "Removing packages"
+  ansible.builtin.dnf:
+    name: "{{ dotvim_pkgs.remove }}"
+    state: absent
+  become: true
+
 - name: "Installing packages"
   ansible.builtin.dnf:
-    name: "{{ dotvim_pkgs }}"
+    name: "{{ dotvim_pkgs.install }}"
     state: present
   become: true

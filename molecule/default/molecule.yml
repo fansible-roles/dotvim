@@ -4,7 +4,7 @@ dependency:
 driver:
   name: podman
 platforms:
-  - name: fedora38
+  - name: dotvim
     image: registry.fedoraproject.org/fedora:38
     pre_build_image: true
   #  image: quay.io/centos/centos:stream8

@@ -5,7 +5,7 @@
 let node = $HOME . '/.vim/plugged/ale/node_modules/.bin'
 let path = $PATH
 function! setmypath#Setup()
-  let $PATH = g:path . ':' . g:node
+  let $PATH = g:node . ':' . g:path
 endfunction
 
 " vim:set et sw=2:
