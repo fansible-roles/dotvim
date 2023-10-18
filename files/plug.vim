@@ -81,6 +81,11 @@ Plug 'junegunn/fzf.vim'
 " Anible Linter
 "Plug 'erikzaadi/vim-ansible-yaml'
 
+" Diff char - improved the diff by printing each character differences
+" more at: https://www.vim.org/scripts/script.php?script_id=4932 
+" https://github.com/rickhowe/diffchar.vim
+Plug 'rickhowe/diffchar.vim'
+
 
 " Initialize plugin system
 call plug#end()
