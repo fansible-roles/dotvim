@@ -1,4 +1,13 @@
 " --- maps ---
+"  map leader to space
+let mapleader=' '
+
+" use leader + h to no-highlight search :nohlsearch
+map <leader>h :nohl<CR>
+
+" disable the highlight after search with enter
+nnoremap <Enter> :noh<CR>:<BS><BS>
+
 "New tabs with shift+t
 nmap <silent> <S-t> :tabnew <CR> 
 
