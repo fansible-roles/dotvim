@@ -3,6 +3,9 @@
 nmap <F7> :NERDTreeToggle <CR>
 nmap <F8> :NERDTree <CR>
 
+"open nerdTree in the current vim file directory
+nnoremap <leader>e :NERDTree .<CR>
+
 " --- Helpers ---
 "auto open nerdtree
 "autocmd vimenter * NERDTree

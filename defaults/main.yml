@@ -148,3 +148,8 @@ dotvim_files:
     dest: "{{ install_root }}/.vim/fzf.vim"
     desc: "fuzzy finder settings" 
     load: true
+
+  - name: "which-key.vim"
+    dest: "{{ install_root }}/.vim/which-key.vim"
+    desc: "which key settings" 
+    load: true

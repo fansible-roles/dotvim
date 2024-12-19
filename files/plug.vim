@@ -86,6 +86,10 @@ Plug 'junegunn/fzf.vim'
 " https://github.com/rickhowe/diffchar.vim
 Plug 'rickhowe/diffchar.vim'
 
+" Which key - show a popup window of shortcut keys
+" more at: https://github.com/liuchengxu/vim-which-key
+Plug 'liuchengxu/vim-which-key'
+
 
 " Initialize plugin system
 call plug#end()
